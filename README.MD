@@ -51,20 +51,21 @@ CREATE SCHEMA [CLEANSED];
 
 # 3. creëren van Cleansed- en Archived-tabellen
 ### 3.1 creër de cleansed en archived databases met de volgende scripts.
-- [createCLEANSED.sql]()
-- [createARCHIVED.sql]()
+- [createCLEANSED.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/createCLEANSED.sql)
+- [createARCHIVED.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/createARCHIVED.sql)
 
 # 4. data oversturen naar CLEANSED tabellen.
 ### 4.1 Voer al deze scripts uit om correcte data over te sturen naar de cleansed en incorrecte data over te sturen naar de archived tabellen.
-- [move_Categories.sql]()
-- [move_Customers.sql]()
-- [move_Order.sql]()
-- [move_OrderDetails.sql]()
-- [move_Product.sql]()
-- [move_Shippers.sql]()
-- [move_Suppliers.sql]()
+- [move_Categories.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/move_Categories.sql)
+- [move_Customers.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/move_Customers.sql)
+- [move_Order.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/move_Order.sql)
+- [move_OrderDetails.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/move_OrderDetails.sql)
+- [move_Product.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/move_Product.sql)
+- [move_Shippers.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/move_Shippers.sql)
+- [move_Suppliers.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/move_Suppliers.sql)
 
 Voer het script sp_CREATE_FK.sql uit, na het versturen van de data. Zodat alle foreign keys voor de cleansed tabel worden gecreëerd.
+- [sp_CREATE_FK.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/sp_Create_FK.sql)
 
 # 5. SSIS
 - creer de database SeaShipper_DWH aan de hand van deze query:
@@ -72,17 +73,17 @@ Voer het script sp_CREATE_FK.sql uit, na het versturen van de data. Zodat alle f
  CREATE DATABASE [SeaShippers_DWH]
  ```
 - voer Startcode_DWH uit
-[Startcode_DWH.sql]()
+[Startcode_DWH.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/Startcode_DWH.sql)
 
 - creer de dim en fact tabellen die gebasseerd zijn op ons ster diagram
   - [ster_diagram]()
-  - [sp_Create_Dim_and_FactTables.sql]()
+  - [sp_Create_Dim_and_FactTables.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/sp_CreateDim_and_Fact.sql)
 
 - Voer nu de ssis packages uit. 
   <br><br>
 <strong> NOTE : </strong> Belangrijk bij het uitvoeren van de packages is dat je de FACT.orders als laatste uitvoert. Deze gebruikt de Geo_id van dim_location daarom is het noodzakelijk deze als laatste uit te voeren
 
 - voer als laatste het script uit om de Foreign keys te creeeren voor het datawarehouse
-  - [sp_create_FK_DWH.sql]()
+  - [sp_create_FK_DWH.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/sp_create_FK_DWH.sql)
 
 # 6.power BI
