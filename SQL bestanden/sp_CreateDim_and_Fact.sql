@@ -53,7 +53,7 @@ CREATE TABLE [SeaShippers_DWH].[DIM].[Location]
 	ALTER TABLE [SeaShippers_DWH].[DIM].[Location] ADD CONSTRAINT
 	PK_Location PRIMARY KEY CLUSTERED 
 	(
-	Geo_id
+	GeoId
 	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 
 	ALTER TABLE [SeaShippers_DWH].[DIM].[Location] SET (LOCK_ESCALATION = TABLE)
@@ -126,7 +126,7 @@ CREATE TABLE [SeaShippers_DWH].[DIM].[Location]
 		[Date_difference] int,
 		[Quantity] tinyint not null,
 		[Discount] decimal(3,2),
-		[Freight] decimal not null,
+		[Freight] float not null,
 
 	)ON [PRIMARY];
 
