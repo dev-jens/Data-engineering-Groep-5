@@ -76,7 +76,7 @@ Voer het script sp_CREATE_FK.sql uit, na het versturen van de data. Zodat alle f
   - [Startcode_DWH.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/Startcode_DWH.sql)
 
 - creer de dim en fact tabellen die gebasseerd zijn op ons ster diagram
-  - [ster_diagram]()
+  - [ster_diagram](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/Sterschema/SterSchemaPNG.png)
   - [sp_Create_Dim_and_FactTables.sql](https://github.com/dev-jens/Data-engineering-Groep-5/blob/master/SQL%20bestanden/sp_CreateDim_and_Fact.sql)
 
 - Voer nu de ssis packages uit. 
