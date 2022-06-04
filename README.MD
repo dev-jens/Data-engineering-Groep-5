@@ -90,20 +90,26 @@ Voer het script sp_CREATE_FK.sql uit, na het versturen van de data. Zodat alle f
 ### 6.1 Data importeren in Power BI
 - Nu dat we de datawarehouse hebben gevuld kunnen we deze gegevens importeren in Power BI om de data te visualiseren
 
+![image](https://user-images.githubusercontent.com/60038450/172000699-fa55ea9a-4166-4268-9f6b-fcb73032499c.png)
 
 - Kies SQL Server-database voor de manier waarop je de gegevens gaat ophalen.
 
+![image](https://user-images.githubusercontent.com/60038450/172000713-d8b30f64-f378-44f5-b4fc-d28f336eaf47.png)
 
 - Geef dan de naam van je SQL Server in en de Database waarvan je de gegevens wilt importeren.
 
+![image](https://user-images.githubusercontent.com/60038450/172000720-ee8a2ac7-0033-43f6-8742-e6b14309a914.png)
 
 - Selecteer alle Dimensie tabellen en de Fact tabel en druk op 'Laden'. Hierna wordt de data ingeladen en kan je ze gebruiken in de visualisatie.
 
+![image](https://user-images.githubusercontent.com/60038450/172000731-4fb35ea7-ea14-4f32-8d39-4cbbb53d2372.png)
 
 ### 6.1 Visualisaties
 
 - Om een visualisatie toe te voegen kies je er een uit de lijst en vul je hier de gewenste data in. 
 
 - Je hebt ook nog de optie om extra kolommen toe te voegen, dit is mogelijk in de query editor. Hier kan je kolommen toevoegen van andere tabellen of nieuwe kolommen maken op basis van berekeningen of voorwaarden.
-=
+
+![image](https://user-images.githubusercontent.com/60038450/172000737-763e1dde-2de1-473d-998e-f140beb8801f.png)
+
 
