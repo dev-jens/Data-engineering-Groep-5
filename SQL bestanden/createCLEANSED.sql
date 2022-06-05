@@ -38,7 +38,7 @@ CREATE TABLE [CLEANSED].[Shippers] (
 CREATE TABLE [CLEANSED].[Product] (
 	[ProductID] TINYINT NOT NULL PRIMARY KEY,
 	[ProductName] NVARCHAR(40),
-	[SupplierID] TINYINT, 
+	[SupplierID] TINYINT NOT NULL, 
 	[CategoryID] TINYINT NOT NULL,
 	[QuantityPerUnit] NVARCHAR(35),
 	[UnitPrice] DECIMAL(5,2),
