@@ -14,7 +14,6 @@ BEGIN
 	WHERE
 		(TRY_CAST (OrderID as int) IS NOT NULL) AND
 		(TRY_CAST (Quantity as TINYINT) IS NOT NULL) AND
-		-- Discount is overal null moet dit dan in de cleansed tabel of willen we alleen cijfers in de tabel
 		(TRY_CAST (Discount as decimal) IS NULL)
 
 	INSERT INTO [staging].[ARCHIVED].[Orders Details] ([OrderID],[Quantity],[Discount])
