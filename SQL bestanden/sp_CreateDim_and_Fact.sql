@@ -2,15 +2,13 @@
 CREATE OR ALTER PROCEDURE [dbo].[sp_Create_Dim_and_FactTables]
 AS
 BEGIN 
---- customer en category mogelijk fout geschreven eigen wss wel 
--- ik had tijd te kort want ik heb een tijd te kort ~ gewoon jens man 2960 gang
 
 CREATE TABLE [SeaShippers_DWH].[DIM].Shippers
 	(
-		Id int NOT NULL  IDENTITY (1, 1)
-      ,[Shipper_id] tinyint NOT NULL 
-	  ,[Shipper_name] varchar(20) NOT NULL
-	  ,[Phone] varchar(20) NULL
+		Id int NOT NULL  IDENTITY (1, 1),
+    		[Shipper_id] tinyint NOT NULL,
+	  	[Shipper_name] varchar(20) NOT NULL,
+	  	[Phone] varchar(20) NULL
 	)ON [PRIMARY];
 
 ALTER TABLE [SeaShippers_DWH].DIM.Shippers ADD CONSTRAINT
@@ -93,7 +91,7 @@ CREATE TABLE [SeaShippers_DWH].[DIM].[Location]
 		[Units_in_stock] int,
 		[Units_on_order] int,
 		[Recoder_level] int,
-		[Discontinued] tinyint,
+		[Discontinued] bit,
 		[Company] nvarchar(50),
 		[Contact] nvarchar(35),
 		[Contact_title] nvarchar(35),
@@ -126,7 +124,7 @@ CREATE TABLE [SeaShippers_DWH].[DIM].[Location]
 		[Date_difference] int,
 		[Quantity] tinyint not null,
 		[Discount] decimal(3,2),
-		[Freight] float not null,
+		[Freight] decimal(18,0) not null,
 
 	)ON [PRIMARY];
 
