@@ -1,3 +1,4 @@
+# Installatiegids
 # 1. Creëren van databases en schema’s 
 ### 1.1 Als eerste creëren we een staging database met de volgende query.
 
