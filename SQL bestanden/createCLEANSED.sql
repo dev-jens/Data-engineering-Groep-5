@@ -38,14 +38,14 @@ CREATE TABLE [CLEANSED].[Shippers] (
 CREATE TABLE [CLEANSED].[Product] (
 	[ProductID] TINYINT NOT NULL PRIMARY KEY,
 	[ProductName] NVARCHAR(40),
-	[SupplierID] FLOAT, --sebiet
+	[SupplierID] TINYINT, 
 	[CategoryID] TINYINT NOT NULL,
 	[QuantityPerUnit] NVARCHAR(35),
 	[UnitPrice] DECIMAL(5,2),
 	[UnitsInStock] INT,
 	[UnitsOnOrder] INT,
 	[ReorderLevel] INT,
-	[Discontinued] TINYINT
+	[Discontinued] BIT
 )
 
 CREATE TABLE [CLEANSED].[Orders]
@@ -57,7 +57,7 @@ CREATE TABLE [CLEANSED].[Orders]
 	[RequiredDate] DATETIME NOT NULL,
 	[ShippedDate] DATETIME,
 	[ShipVia] TINYINT NOT NULL ,
-	[Freight] FLOAT NOT NULL,
+	[Freight] DECIMAL(18,0) NOT NULL,
 	[ShipName] NVARCHAR(50),
 	[ShipAddress] NVARCHAR(50),
 	[ShipCity] NVARCHAR(20),
